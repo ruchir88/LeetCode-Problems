@@ -1,5 +1,6 @@
 Problem: Solve the given equation 
-ex: p = m + n + 3;
+ex: 
+	p = m + n + 3;
  	n = 2 + m;
  	m = 9;
 

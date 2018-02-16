@@ -1,0 +1,5 @@
+weight = 6 + origin + offset + 10 + 34
+location = 1 + origin + offset + 5 + weight
+offset = 4 + random + 1
+origin = 3 + 5
+random = 2

@@ -1,3 +1,13 @@
+Problem: Solve the given equation 
+ex: p = m + n + 3;
+ 	n = 2 + m;
+ 	m = 9;
+
+ ans:
+ 	m = 9;
+ 	n = 11;
+ 	p = 23
+
 Classes:
 	- FileReader - Reads/Parses the input file that will be entered when the program is executed. This class splits all the equations into different vector of Equations(as a string line).
 

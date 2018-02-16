@@ -1,6 +1,5 @@
 // ProblemSet1.cpp : Defines the entry point for the console application.
 
-#include "stdafx.h"
 #include "Header.h"
 
 ListNode* MergeKSortedListUtil(int low, int high, vector<ListNode*>& lists)

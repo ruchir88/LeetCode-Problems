@@ -1,5 +1,4 @@
-// ConsoleApplication4.cpp : Defines the entry point for the console application.
-//
+// ProblemSet3.cpp : Defines the entry point for the console application.
 
 #include "stdafx.h"
 #include "Header.h"
@@ -39,7 +38,7 @@ DBData LRU::Read(int id)
 	}
 
 	DBData dbToReturn = *m_umHashMap[id];
-	
+
 	// Update LRU
 	if (dbToReturn.GetID() != m_LRUCache.front().GetID())
 	{
@@ -147,7 +146,7 @@ TreeNode* LCA2(TreeNode* n1, TreeNode* n2)
 
 	return nullptr;
 }
- 
+
 vector<int> PlusOne(vector<int> &A) {
 	// Do not write main() function.
 	// Do not read input, instead use the arguments to the function.
@@ -174,7 +173,7 @@ vector<int> PlusOne(vector<int> &A) {
 		{
 			carry = 1;
 			B.insert(B.begin(), 0);
-			if (i==0)
+			if (i == 0)
 			{
 				B.insert(B.begin(), 1);
 			}
@@ -225,7 +224,7 @@ vector<vector<int> > GeneratePascal(int A) {
 }
 
 // TODO: Not solved!
-void SetZeroes(vector<vector<int> > &A) 
+void SetZeroes(vector<vector<int> > &A)
 {
 	unordered_set<int> setRowsZeroed{};
 	unordered_set<int> setColumnsZeroed{};
@@ -293,9 +292,9 @@ vector<Interval> GetMergedOverlappingIntervals(vector<Interval> &A)
 }
 
 template<class Type, int size>
-void Print(Type (&var)[size])
+void Print(Type(&var)[size])
 {
-	cout << size <<endl;
+	cout << size << endl;
 }
 
 unsigned int reverse(unsigned int A) {
@@ -306,7 +305,7 @@ unsigned int reverse(unsigned int A) {
 		// Get the least significant bit of number A
 		unsigned int leastSignificantBit = A & 1;
 		A = A >> 1;
-		reversedBits =  reversedBits << 1;
+		reversedBits = reversedBits << 1;
 		reversedBits |= leastSignificantBit;
 	}
 
@@ -426,7 +425,7 @@ ListNode* reverseUtil(ListNode* A, ListNode* head)
 }
 
 // Works Perfectly
-ListNode* reverseList(ListNode* A) 
+ListNode* reverseList(ListNode* A)
 {
 	if (A->next == nullptr)
 	{
@@ -459,10 +458,6 @@ int main()
 	int iPowWithModTest = -1 % 20;
 	int iPowWithMod = powWithMod(2, 3, 3);
 
-	// Interval map test
-	IntervalMapTest();
-	interval_map<int, char> im_map('-1');
-
 	im_map.assign(0, 5, 'A');
 	im_map.assign(2, 9, 'B');
 
@@ -473,9 +468,9 @@ int main()
 
 	// Pair
 	pair<int, int> p1{ 1, 2 };
-	pair<int, int> p2 = make_pair(6,3);
+	pair<int, int> p2 = make_pair(6, 3);
 
-	unordered_map<int, int> um_pair{ {29, 1}, {990, 78} };
+	unordered_map<int, int> um_pair{ { 29, 1 },{ 990, 78 } };
 	auto itrum = um_pair.begin();
 	cout << itrum->second << endl;
 	um_pair.erase(990);
@@ -516,9 +511,8 @@ int main()
 
 	// Merge Overlapping Intervals
 	vector<Interval> vInterval{ Interval(2,6), Interval(1,3), Interval(8,10), Interval(15,18) };
+	vector<Interval> vIntervalResult = GetMergedOverlappingIntervals(vInterval);
 
-	vector<Interval> vIntervalResult= GetMergedOverlappingIntervals(vInterval);
-	
 	// Using the type alias
 	MyList<string> myCustomList;
 	list<string> lListOfString{ "1", "2" };
@@ -534,7 +528,7 @@ int main()
 		cout << "Successful!!" << endl;
 	}
 	// SetZeroes;
-	vector<vector<int> > vSetZeroesVector{ {0,0}, {1,1} };
+	vector<vector<int> > vSetZeroesVector{ { 0,0 },{ 1,1 } };
 	SetZeroes(vSetZeroesVector);
 
 	// Generate Pascal
@@ -570,7 +564,6 @@ int main()
 
 	TreeNode* pReturnedNode = LCA2(t5, t4);
 
-
 	// string to int, char to int, int to string etc.
 	string sStringToInt = "45627";
 	int stoiInt = stoi(sStringToInt);
@@ -581,7 +574,7 @@ int main()
 	for (char c : sStringToInt)
 	{
 		int a = c - '0';
-		cout << a <<" "<< endl;
+		cout << a << " " << endl;
 	}
 
 	// LRU2
@@ -600,7 +593,7 @@ int main()
 
 	lru2.Write(DBData(7832, 12));
 	int dbReturned5 = lru2.Read(12);
-	
+
 	// LRU 
 	LRU lru;
 	//lru.Read(1);
@@ -669,6 +662,7 @@ int main()
 		}
 	}
 
+	// Temporary Implementation do this in a separate function
 	// BFS
 	for (auto ele : myGraph->m_umGraph)
 	{
@@ -704,7 +698,7 @@ int main()
 		}
 	}
 
-    return 0;
+	return 0;
 }
 
 

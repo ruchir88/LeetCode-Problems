@@ -21,7 +21,7 @@ Files:
 	Makefile
 
 Running Code:
-	1)make CodeChallengeExe - compiles and builds the project
+	1)make Exe - compiles and builds the project
 	2)./Exe - runs the project (will prompt you to enter file name)
 	3)make clean - removes all .o files and the executable file
 
